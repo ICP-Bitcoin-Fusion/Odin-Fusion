@@ -12,9 +12,9 @@ export default function Hero() {
           <p className="mb-8 leading-relaxed text-lg font-semibold ">
             Orator of Web3
           </p>
-          <p className="leading-relaxed text-base font-semibold">
-            Odin Fusion offers a full-featured conversation application <br />
-            that runs entirely on the Internet Computer Blockchain.
+          <p className="leading-relaxed text-4xl font-medium">
+            Odin Fusion offers a full-featured conversation application that
+            runs entirely on the Internet Computer Blockchain.
           </p>
           <div className="flex justify-center mt-20">
             <AccentButton text="Launch App" func={() => {}} />

@@ -3,7 +3,7 @@ import AccentButton from "./AccentButton";
 
 export default function Navbar({ navLinks }) {
   return (
-    <header className="text-gray-600 body-font">
+    <header className="text-gray-600 body-font sticky top-0 border-b-2">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
           className="flex title-font font-medium items-center text-light-font mb-4 md:mb-0"
