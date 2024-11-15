@@ -10,12 +10,11 @@ import {
   canisterId as ledgerId,
   createActor as createLedgerActor,
 } from "../../../declarations/Odin_Fusion_backend"
-import { Actor, ActorSubclass, SignIdentity } from "@dfinity/agent"
+import { ActorSubclass} from "@dfinity/agent"
 import { _SERVICE } from "../../../declarations/Odin_Fusion_backend/Odin_Fusion_backend.did"
 import { useAppDispatch } from "../Redux/hooks"
 // import { updateAuth } from "../redux/slice/authClient"
 import { useNavigate } from "react-router-dom"
-import {isAnyOf} from "@reduxjs/toolkit";
 
 const AuthContext = React.createContext<{
   isAuthenticated: boolean
