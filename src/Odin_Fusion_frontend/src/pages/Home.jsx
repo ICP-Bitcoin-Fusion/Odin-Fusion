@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import FeatureSection from "../components/FeatureSection";
 import RoadMapSection from "../components/RoadMapSection";
+import TeamSection from "../components/TeamSection";
 
 // assets
 import openIMG from "/images/assets/Open Source Icon.png";
@@ -14,12 +15,12 @@ import { useRef } from "react";
 
 export default function Home() {
   const links = useRef([
-    { title: "Features", location: "/" },
-    { title: "Pricing", location: "/" },
-    { title: "Roadmap", location: "/" },
-    { title: "Whitepaper", location: "/" },
-    { title: "Blog", location: "/" },
-    { title: "FAQs", location: "/" },
+    { title: "Features", location: "#features" },
+    { title: "Projects", location: "#projects" },
+    { title: "Roadmap", location: "#roadmap" },
+    { title: "Whitepaper", location: "#" },
+    { title: "Blog", location: "#" },
+    { title: "FAQs", location: "#" },
   ]);
 
   const features = useRef([
@@ -47,48 +48,70 @@ export default function Home() {
     { icon: "", heading: "", text: "" },
   ]);
 
-  const projects = useRef([
+  const projects = useRef({
+    live: [
+      {
+        image: ProjectBG,
+        projectName: "NFT MOKO",
+        goal: "10000.0 GOAL",
+        live: "Live now",
+        author: "Sukuna Mokoto",
+      },
+      {
+        image: ProjectBG,
+        projectName: "NFT MOKO",
+        goal: "10000.0 GOAL",
+        live: "Live now",
+        author: "Sukuna Mokoto",
+      },
+      {
+        image: ProjectBG,
+        projectName: "NFT MOKO",
+        goal: "10000.0 GOAL",
+        live: "Live now",
+        author: "Sukuna Mokoto",
+      },
+    ],
+    funded: [
+      {
+        image: ProjectBG,
+        projectName: "NFT MOKO",
+        goal: "10000.0 GOAL",
+        live: "Live now",
+        author: "Sukuna Mokoto",
+      },
+      {
+        image: ProjectBG,
+        projectName: "NFT MOKO",
+        goal: "10000.0 GOAL",
+        live: "Live now",
+        author: "Sukuna Mokoto",
+      },
+      {
+        image: ProjectBG,
+        projectName: "NFT MOKO",
+        goal: "10000.0 GOAL",
+        live: "Live now",
+        author: "Sukuna Mokoto",
+      },
+    ],
+  });
+
+  const teamMembers = useRef([
     {
-      image: ProjectBG,
-      projectName: "NFT MOKO",
-      goal: "10000.0 GOAL",
-      live: "Live now",
-      author: "Sukuna Mokoto",
+      image: "",
+      member: "Sukuna",
+      bio: "Sukuna is a Software Engineer with over 25 years of experience spanning diverse domains, particularly in web technologies and scalable system architectures. Recently, he has been dedicated to designing and optimizing distributed systems and microservice architectures to support high-performance e-commerce platforms. Sukuna prioritizes building efficient, maintainable, and robust software solutions. He holds a Master’s Degree in Computer Science and Engineering from the Massachusetts Institute of Technology (MIT).",
     },
     {
-      image: ProjectBG,
-      projectName: "NFT MOKO",
-      goal: "10000.0 GOAL",
-      live: "Live now",
-      author: "Sukuna Mokoto",
+      image: "",
+      member: "Technogodwr",
+      bio: "Technogodwr is a Software Engineer with over 25 years of experience spanning diverse domains, particularly in web technologies and scalable system architectures. Recently, he has been dedicated to designing and optimizing distributed systems and microservice architectures to support high-performance e-commerce platforms. Technogodwr prioritizes building efficient, maintainable, and robust software solutions. He holds a Master’s Degree in Computer Science and Engineering from the Massachusetts Institute of Technology (MIT).",
     },
     {
-      image: ProjectBG,
-      projectName: "NFT MOKO",
-      goal: "10000.0 GOAL",
-      live: "Live now",
-      author: "Sukuna Mokoto",
-    },
-    {
-      image: ProjectBG,
-      projectName: "NFT MOKO",
-      goal: "10000.0 GOAL",
-      live: "Live now",
-      author: "Sukuna Mokoto",
-    },
-    {
-      image: ProjectBG,
-      projectName: "NFT MOKO",
-      goal: "10000.0 GOAL",
-      live: "Live now",
-      author: "Sukuna Mokoto",
-    },
-    {
-      image: ProjectBG,
-      projectName: "NFT MOKO",
-      goal: "10000.0 GOAL",
-      live: "Live now",
-      author: "Sukuna Mokoto",
+      image: "",
+      member: "Daniel",
+      bio: "Daniel is a Software Engineer with over 25 years of experience spanning diverse domains, particularly in web technologies and scalable system architectures. Recently, he has been dedicated to designing and optimizing distributed systems and microservice architectures to support high-performance e-commerce platforms. Daniel prioritizes building efficient, maintainable, and robust software solutions. He holds a Master’s Degree in Computer Science and Engineering from the Massachusetts Institute of Technology (MIT).",
     },
   ]);
   return (
@@ -100,6 +123,7 @@ export default function Home() {
         milestones={milestones.current}
         projects={projects.current}
       />
+      <TeamSection team={teamMembers.current} />
     </main>
   );
 }

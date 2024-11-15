@@ -13,6 +13,8 @@ export default {
       },
       backgroundImage: {
         "hero-bg": "url('/images/backgrounds/Up bg.svg')",
+        "mid-bg": "url('/images/backgrounds/midbackground.png')",
+        "roadmap-bg": "url('/images/backgrounds/Roadmap.png')",
       },
     },
   },
