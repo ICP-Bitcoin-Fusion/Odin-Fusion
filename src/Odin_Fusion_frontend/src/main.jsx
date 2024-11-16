@@ -5,11 +5,16 @@ import "./index.scss";
 
 import App from "./App";
 import Layout from "./components/Layout";
+import RoadMap from "./pages/RoadMap";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/roadmap",
+    element: <RoadMap />,
   },
 ]);
 

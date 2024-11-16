@@ -28,5 +28,9 @@ html {
 
 .my-head::before {
   content: "";
-  @apply w-full h-full absolute p-5 bg-[rgba(0,0,0,0.3)] -z-30 backdrop-blur-md;
+  @apply w-full h-full absolute p-5 bg-[rgba(0,0,0,.3)] -z-30 backdrop-blur-md;
+}
+.my-head::after {
+  content: "";
+  @apply w-full h-full absolute p-5 bg-[rgba(0,0,0,1)] top-0 -z-50 backdrop-blur-md;
 }

@@ -1,5 +1,4 @@
-// sections
-import Navbar from "../components/Navbar";
+// sectionimport Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import FeatureSection from "../components/FeatureSection";
 import RoadMapSection from "../components/RoadMapSection";
@@ -14,15 +13,6 @@ import ProjectBG from "/images/backgrounds/download 1.png";
 import { useRef } from "react";
 
 export default function Home() {
-  const links = useRef([
-    { title: "Features", location: "#features" },
-    { title: "Projects", location: "#projects" },
-    { title: "Roadmap", location: "#roadmap" },
-    { title: "Whitepaper", location: "#" },
-    { title: "Blog", location: "#" },
-    { title: "FAQs", location: "#" },
-  ]);
-
   const features = useRef([
     {
       icon: openIMG,
@@ -116,7 +106,6 @@ export default function Home() {
   ]);
   return (
     <main className="black-gradient">
-      <Navbar navLinks={links.current} />
       <Hero />
       <FeatureSection features={features.current} />
       <RoadMapSection
