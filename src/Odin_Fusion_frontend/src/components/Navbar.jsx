@@ -12,9 +12,9 @@ export default function Navbar({ navLinks }) {
           <img src={Logo} alt="odin-fusion-logo" />
         </a>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          {navLinks.map(({ title, location }) => {
+          {navLinks.map(({ title, location }, idx) => {
             return (
-              <a className="mr-5 text-light-font " href={location}>
+              <a className="mr-5 text-light-font " href={location} key={idx}>
                 {title}
               </a>
             );

@@ -9,7 +9,7 @@ function RoadMapSection({ milestones, projects }) {
   return (
     <>
       <section id="roadmap" className="relative z-30 ">
-        <div className="bg-mid-bg bg-cover bg-no-repeat w-full aspect-[1.5] absolute top-44 rounded-br-[200px] -z-30"></div>
+        <div className="bg-mid-bg bg-cover bg-no-repeat opacity-50 w-full aspect-[1.5] absolute top-44 rounded-br-[200px] -z-30"></div>
 
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="text-5xl font-medium title-font text-light-font underline my-20">
@@ -17,9 +17,9 @@ function RoadMapSection({ milestones, projects }) {
           </h1>
         </div>
         <div className="container mx-auto grid grid-cols-2 grid-rows-2 place-content-center gap-y-52 bg-roadmap-bg bg-contain bg-no-repeat bg-center">
-          {milestones.map(({ icon, heading, text }) => {
+          {milestones.map(({ icon, heading, text }, idx) => {
             return (
-              <div className="w-full justify-center flex">
+              <div className="w-full justify-center flex" key={idx}>
                 <Feat icon={icon} heading={heading} text={text} />
               </div>
             );
@@ -83,7 +83,7 @@ const SubSection = ({ heading, projects, note = "" }) => {
       <SubSectionHeding text={heading} />
       <h3 className="text-light-font text-2xl mb-5 font-light">{note}</h3>
       <div className="flex flex-wrap -m-4 mb-16">
-        {projects.map(({ image, projectName, live, author, goal }) => {
+        {projects.map(({ image, projectName, live, author, goal }, idx) => {
           return (
             <Project
               image={image}
@@ -91,6 +91,7 @@ const SubSection = ({ heading, projects, note = "" }) => {
               live={live}
               author={author}
               goal={goal}
+              key={idx}
             />
           );
         })}

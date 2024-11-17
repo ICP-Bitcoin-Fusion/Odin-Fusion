@@ -12,8 +12,8 @@ export default function FeatureSection({ features }) {
           </h1>
         </div>
         <div className="flex flex-wrap -m-4">
-          {features.map(({ icon, heading, text }) => {
-            return <Feat icon={icon} heading={heading} text={text} />;
+          {features.map(({ icon, heading, text }, idx) => {
+            return <Feat icon={icon} heading={heading} text={text} key={idx} />;
           })}
         </div>
 

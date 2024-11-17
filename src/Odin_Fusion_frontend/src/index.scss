@@ -32,5 +32,13 @@ html {
 }
 .my-head::after {
   content: "";
-  @apply w-full h-full absolute p-5 bg-[rgba(0,0,0,1)] top-0 -z-50 backdrop-blur-md;
+  @apply w-full h-full absolute p-5 bg-[rgba(0,0,0,1)] top-0 -z-50;
+}
+.road-hero::before {
+  content: "";
+  @apply w-full aspect-[1.73] bg-hero-bg bg-cover bg-center bg-no-repeat absolute p-5  top-0 -z-10;
+}
+.road::after {
+  content: "";
+  @apply w-full aspect-square bg-mid-bg bg-cover bg-center opacity-50 bg-no-repeat absolute p-5  top-52 -z-10;
 }
