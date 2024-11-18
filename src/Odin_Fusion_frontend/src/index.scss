@@ -20,6 +20,11 @@
   );
   background-repeat: no-repeat;
 }
+
+.angular-gradient {
+  background: conic-gradient(#1c0b7c 0% 50%, #5b0cf8 50% 100%, #ffffff);
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-block: 100px;

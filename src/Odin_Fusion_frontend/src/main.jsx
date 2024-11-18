@@ -6,6 +6,7 @@ import "./index.scss";
 import App from "./App";
 import Layout from "./components/Layout";
 import RoadMap from "./pages/RoadMap";
+import SignIn from "./pages/SignIn";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/roadmap",
     element: <RoadMap />,
+  },
+  {
+    path: "/auth",
+    element: <SignIn />,
   },
 ]);
 

@@ -20,7 +20,9 @@ export default function Navbar({ navLinks }) {
             );
           })}
         </nav>
-        <AccentButton text="Launch App" func={() => {}} />
+        <a href="/auth">
+          <AccentButton text="Launch App" func={() => {}} />
+        </a>
       </div>
     </header>
   );
