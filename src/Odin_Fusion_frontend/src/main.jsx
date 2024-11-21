@@ -8,6 +8,8 @@ import Layout from "./components/Layout";
 import RoadMap from "./pages/RoadMap";
 import SignIn from "./pages/SignIn";
 import Explorer from "./pages/Explorer";
+import { AuthProvider } from "./auth/use-auth-client"
+
 
 const router = createBrowserRouter([
   {
@@ -30,8 +32,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Layout>
-      <RouterProvider router={router} />
-    </Layout>
+    <AuthProvider>
+      <Layout>
+        <RouterProvider router={router} />
+      </Layout>
+    </AuthProvider>
   </React.StrictMode>
 );
