@@ -8,7 +8,7 @@ const AuthTrial = () => {
     <div>
         <div>AuthTrial</div>
         <button onClick={() => loginNFID()}>Login NFID</button>
-        <button onClick={() => login()}>Login NFID</button>
+        <button onClick={() => login()}>Login II</button>
     </div>
   )
 }
