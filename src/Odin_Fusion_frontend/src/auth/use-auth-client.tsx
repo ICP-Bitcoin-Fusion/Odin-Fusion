@@ -39,7 +39,7 @@ const AuthContext = createContext<{
 });
 const network = process.env.DFX_NETWORK || "local";
 console.log(network);
-const APPLICATION_NAME = "chess_gamebloc";
+const APPLICATION_NAME = "odin_fusion";
 const APPLICATION_LOGO_URL = "https://i.postimg.cc/zBMQpTJn/Asset-51.png";
 
 const AUTH_PATH =

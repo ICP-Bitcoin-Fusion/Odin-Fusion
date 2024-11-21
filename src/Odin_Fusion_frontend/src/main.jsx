@@ -9,13 +9,14 @@ import App from "./App";
 import RoadMap from "./pages/RoadMap";
 import SignIn from "./pages/SignIn";
 import Explorer from "./pages/Explorer";
+import AuthTrial from "./components/AuthTrial";
 import { AuthProvider } from "./auth/use-auth-client";
 import { AgentProvider } from "@ic-reactor/react";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <AuthTrial />,
   },
   {
     path: "/roadmap",
