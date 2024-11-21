@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./Redux/store";
 import "./index.scss";
 
 import App from "./App";
-import Layout from "./components/Layout";
 import RoadMap from "./pages/RoadMap";
 import SignIn from "./pages/SignIn";
 import Explorer from "./pages/Explorer";
-import { AuthProvider } from "./auth/use-auth-client"
-import {AgentProvider} from "@ic-reactor/react"
-
+import { AuthProvider } from "./auth/use-auth-client";
+import { AgentProvider } from "@ic-reactor/react";
 
 const router = createBrowserRouter([
   {
@@ -33,12 +33,13 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AgentProvider>
-      <AuthProvider>
-        <Layout>
+    <Provider store={store}>
+      {" "}
+      <AgentProvider>
+        <AuthProvider>
           <RouterProvider router={router} />
-        </Layout>
-      </AuthProvider>
-    </AgentProvider>
+        </AuthProvider>
+      </AgentProvider>
+    </Provider>
   </React.StrictMode>
 );

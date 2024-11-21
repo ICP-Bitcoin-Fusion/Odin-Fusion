@@ -1,9 +1,9 @@
 import logo from "/images/Upper corner.png";
-import metamask from "/images/icons/metamask.png";
 import nf from "/images/icons/nf_id.png";
-import bFinity from "/images/icons/bfinity.png";
 import internetId from "/images/icons/ICP_LOGO.png";
-import stoic from "/images/icons/stoic.png";
+import stoic from "/images/icons/bitcoin.png";
+import { useAuth } from "../auth/use-auth-client";
+import { useNavigate } from "react-router";
 
 import { useRef } from "react";
 
@@ -25,12 +25,23 @@ function SignIn() {
 }
 
 const SignInControls = () => {
+  const navigate = useNavigate();
+  const { loginNFID, login } = useAuth();
+
+  function loginWithNFID() {
+    loginNFID(() => {
+      navigate("/explore");
+    });
+  }
+  function logingWithII() {
+    login(() => {
+      navigate("/explore");
+    });
+  }
   const authMethods = useRef([
-    { text: "Connect With Meta Mask", image: metamask, func: () => {} },
-    { text: "Connect With NF ID", image: nf, func: () => {} },
-    { text: "Connect With BFinity", image: bFinity, func: () => {} },
-    { text: "Connect With Internet ID", image: internetId, func: () => {} },
-    { text: "Connect With Stoic Wallet", image: stoic, func: () => {} },
+    { text: "Connect With NF ID", image: nf, func: loginWithNFID },
+    { text: "Connect With Internet ID", image: internetId, func: logingWithII },
+    { text: "Connect With Bitcoin", image: stoic, func: () => {} },
   ]);
   return (
     <div className="space-y-16">
@@ -62,7 +73,7 @@ const AuthButton = ({ image, text, func }) => {
     >
       <div className="w-2/3 flex gap-10">
         {" "}
-        <img src={image} alt="/auth-mode" />
+        <img src={image} alt="/auth-mode" className="w-10 h-10" />
         <p className="text-xl font-semibold tracking-widest">{text}</p>
       </div>
     </button>

@@ -29,7 +29,9 @@ const persistConfig = {
 }
 
 const reducer = combineReducers({
-    // userProfile: profileReducer,
+    userProfile: () => {
+        return ""
+    },
     // tournamentData: tournamentReducer,
     // gameCategory: categoryReducer,
     // authenticationClient: authReducer,
