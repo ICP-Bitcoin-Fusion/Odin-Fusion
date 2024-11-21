@@ -7,6 +7,7 @@ import App from "./App";
 import Layout from "./components/Layout";
 import RoadMap from "./pages/RoadMap";
 import SignIn from "./pages/SignIn";
+import Explorer from "./pages/Explorer";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/auth",
     element: <SignIn />,
+  },
+  {
+    path: "/explore",
+    element: <Explorer />,
   },
 ]);
 

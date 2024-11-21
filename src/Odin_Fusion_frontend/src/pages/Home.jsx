@@ -1,4 +1,4 @@
-// sectionimport Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import FeatureSection from "../components/FeatureSection";
 import RoadMapSection from "../components/RoadMapSection";
@@ -106,6 +106,7 @@ export default function Home() {
   ]);
   return (
     <main className="black-gradient">
+      <Navbar />
       <Hero />
       <FeatureSection features={features.current} />
       <RoadMapSection

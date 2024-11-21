@@ -1,5 +1,6 @@
 import parallelogram from "/images/assets/Rectangle54.png";
 import AccordionComponent from "../components/AccordionComponent";
+import Navbar from "../components/Navbar";
 import { useRef } from "react";
 
 const arr = [];
@@ -24,6 +25,7 @@ function RoadMap() {
   const milestones = useRef(arr);
   return (
     <main className="black-gradient">
+      <Navbar />
       <section className="pt-24 road-hero relative z-30">
         <div className="container mx-auto flex items-center gap-10 text-light-font font-medium">
           <img src={parallelogram} className="self-stretch" />
@@ -44,7 +46,7 @@ function RoadMap() {
           Check Our Milestones and <br />
           Progress On-The-Go
         </h1>
-        <div className="container mx-auto mt-20">
+        <div className="container mx-auto mt-20 overflow-hidden">
           {milestones.current.map(({ milestone, subStones, date }, idx) => {
             return (
               <AccordionComponent

@@ -1,10 +1,15 @@
 import logo from "/images/Upper corner.png";
-import googleIMG from "/images/icons/image8-21.png";
-import line from "/images/icons/line.png";
+import metamask from "/images/icons/metamask.png";
+import nf from "/images/icons/nf_id.png";
+import bFinity from "/images/icons/bfinity.png";
+import internetId from "/images/icons/ICP_LOGO.png";
+import stoic from "/images/icons/stoic.png";
+
+import { useRef } from "react";
 
 function SignIn() {
   return (
-    <main className="flex w-full angular-gradient h-full">
+    <main className="flex w-full angular-gradient min-h-screen">
       <div className="w-1/2 flex flex-col justify-between items-start py-20 px-20">
         <img src={logo} alt="/logo" />
         <h2 className="text-5xl font-bold leading-relaxed text-light-font">
@@ -20,44 +25,31 @@ function SignIn() {
 }
 
 const SignInControls = () => {
+  const authMethods = useRef([
+    { text: "Connect With Meta Mask", image: metamask, func: () => {} },
+    { text: "Connect With NF ID", image: nf, func: () => {} },
+    { text: "Connect With BFinity", image: bFinity, func: () => {} },
+    { text: "Connect With Internet ID", image: internetId, func: () => {} },
+    { text: "Connect With Stoic Wallet", image: stoic, func: () => {} },
+  ]);
   return (
     <div className="space-y-16">
       <div className="text-light-font text-center">
         <h1 className="text-4xl font-semibold mb-3 tracking-wide">
-          Sign Up For Free
+          Connect A Wallet
         </h1>
         <p className="font-extralight">
-          Become an Odin today, fuse the future.
+          By connecting a wallet , you agree to the{" "}
+          <span className="text-[#5698FC]">Terms of Service</span> from ODIN
+          FUSION,
+          <br /> and you have read and understood the ODIN FUSION{" "}
+          <span className="text-[#5698FC]">disclaimer</span>{" "}
         </p>
       </div>
-      <AuthButton
-        image={googleIMG}
-        text="Sign Up With Google"
-        func={() => {}}
-      />
-      <div className="w-max mx-auto text-center">
-        <p className="text-light-font text-xl font-semibold mb-7">OR</p>
-        <img src={line} />
-      </div>
-      <AuthButton
-        image={googleIMG}
-        text="Sign Up With Google"
-        func={() => {}}
-      />{" "}
-      <AuthButton
-        image={googleIMG}
-        text="Sign Up With Google"
-        func={() => {}}
-      />{" "}
-      <AuthButton
-        image={googleIMG}
-        text="Sign Up With Google"
-        func={() => {}}
-      />
-      <p className="text-light-font font-semibold text-center text-xl">
-        Already have an account?{" "}
-        <span className="cursor-pointer text-main-accent">Sign In</span>
-      </p>
+
+      {authMethods.current.map(({ text, image, func }, idx) => {
+        return <AuthButton image={image} text={text} func={func} key={idx} />;
+      })}
     </div>
   );
 };
@@ -65,11 +57,14 @@ const SignInControls = () => {
 const AuthButton = ({ image, text, func }) => {
   return (
     <button
-      className="border-4 border-main-accent rounded-3xl mx-auto px-20 py-5 flex gap-10 items-center text-light-font bg-[#1A1722] w-full max-w-[630] justify-center"
+      className="border border-main-accent rounded-xl mx-auto px-20 py-5 flex gap-10 items-center text-light-font bg-[rgba(217,217,217,0.3)] w-full max-w-[630] justify-center"
       onClick={func}
     >
-      <img src={googleIMG} alt="/auth-mode" />
-      <p className="text-xl font-semibold">{text}</p>
+      <div className="w-2/3 flex gap-10">
+        {" "}
+        <img src={image} alt="/auth-mode" />
+        <p className="text-xl font-semibold tracking-widest">{text}</p>
+      </div>
     </button>
   );
 };
