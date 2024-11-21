@@ -109,10 +109,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <FeatureSection features={features.current} />
-      <RoadMapSection
+      {/* <RoadMapSection
         milestones={milestones.current}
         projects={projects.current}
-      />
+      /> */}
       <TeamSection team={teamMembers.current} />
     </main>
   );

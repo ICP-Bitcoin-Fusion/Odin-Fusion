@@ -29,11 +29,13 @@ const SignInControls = () => {
   const { loginNFID, login } = useAuth();
 
   function loginWithNFID() {
+    console.log("nfid login");
     loginNFID(() => {
       navigate("/explore");
     });
   }
   function logingWithII() {
+    console.log("II login");
     login(() => {
       navigate("/explore");
     });
