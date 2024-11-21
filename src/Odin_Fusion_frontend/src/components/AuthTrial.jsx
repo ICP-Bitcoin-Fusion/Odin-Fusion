@@ -5,11 +5,11 @@ const AuthTrial = () => {
 
     const { login, loginNFID } = useAuth()
   return (
-    <>
+    <div>
         <div>AuthTrial</div>
         <button onClick={() => loginNFID()}>Login NFID</button>
         <button onClick={() => login()}>Login NFID</button>
-    </>
+    </div>
   )
 }
 
