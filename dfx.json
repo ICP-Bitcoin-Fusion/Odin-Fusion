@@ -5,6 +5,10 @@
       "package": "Odin_Fusion_backend",
       "type": "rust"
     },
+    "Odins_Kitchen": {
+      "main": "src/Odins_Kitchen/main.mo",
+      "type": "motoko"
+    },
     "Odin_Fusion_frontend": {
       "dependencies": [
         "Odin_Fusion_backend"
