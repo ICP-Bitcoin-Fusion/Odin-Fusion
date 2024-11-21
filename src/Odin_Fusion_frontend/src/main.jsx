@@ -9,6 +9,7 @@ import RoadMap from "./pages/RoadMap";
 import SignIn from "./pages/SignIn";
 import Explorer from "./pages/Explorer";
 import { AuthProvider } from "./auth/use-auth-client"
+import {AgentProvider} from "@ic-reactor/react"
 
 
 const router = createBrowserRouter([
@@ -32,10 +33,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <Layout>
-        <RouterProvider router={router} />
-      </Layout>
-    </AuthProvider>
+    <AgentProvider>
+      <AuthProvider>
+        <Layout>
+          <RouterProvider router={router} />
+        </Layout>
+      </AuthProvider>
+    </AgentProvider>
   </React.StrictMode>
 );
