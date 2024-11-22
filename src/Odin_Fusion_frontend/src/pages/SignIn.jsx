@@ -71,7 +71,7 @@ const AuthButton = ({ image, text, func }) => {
   return (
     <button
       className="border border-main-accent rounded-xl mx-auto px-20 py-5 flex gap-10 items-center text-light-font bg-[rgba(217,217,217,0.3)] w-full max-w-[630] justify-center"
-      onClick={func}
+      onClick={() => func()}
     >
       <div className="w-2/3 flex gap-10">
         {" "}
