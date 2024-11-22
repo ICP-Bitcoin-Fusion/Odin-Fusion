@@ -40,11 +40,11 @@ const SignInControls = () => {
       navigate("/explore");
     });
   }
-  const authMethods = useRef([
-    { text: "Connect With NF ID", image: nf, func: loginWithNFID },
-    { text: "Connect With Internet ID", image: internetId, func: logingWithII },
+  const authMethods = [
+    { text: "Connect With NF ID", image: nf, func: loginNFID },
+    { text: "Connect With Internet ID", image: internetId, func: login },
     { text: "Connect With Bitcoin", image: stoic, func: () => {} },
-  ]);
+  ];
   return (
     <div className="space-y-16">
       <div className="text-light-font text-center">
@@ -60,7 +60,7 @@ const SignInControls = () => {
         </p>
       </div>
 
-      {authMethods.current.map(({ text, image, func }, idx) => {
+      {authMethods.map(({ text, image, func }, idx) => {
         return <AuthButton image={image} text={text} func={func} key={idx} />;
       })}
     </div>
@@ -77,10 +77,6 @@ const AuthButton = ({ image, text, func }) => {
         {" "}
         <img src={image} alt="/auth-mode" className="w-10 h-10" />
         <p className="text-xl font-semibold tracking-widest">{text}</p>
-        <button className='px-2 py-2 border-2 rounded-lg' onClick={() => {
-        console.log('login:', loginNFID);
-        loginNFID();
-        }}>Login with NFID</button>
       </div>
     </button>
   );
