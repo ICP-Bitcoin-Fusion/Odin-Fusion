@@ -48,3 +48,20 @@ html {
   content: "";
   @apply w-full aspect-square bg-mid-bg bg-cover bg-center opacity-50 bg-no-repeat absolute p-5  top-52 -z-10;
 }
+.side {
+  @apply duration-300 w-1/5;
+}
+
+.inside {
+  @apply w-1/5 duration-300;
+}
+.side[data-visible="true"] {
+  @apply w-0 p-0;
+}
+.side[data-visible="true"] div {
+  @apply w-0 p-0 hidden;
+}
+
+.inside[data-visible="true"] {
+  @apply w-0 p-0;
+}

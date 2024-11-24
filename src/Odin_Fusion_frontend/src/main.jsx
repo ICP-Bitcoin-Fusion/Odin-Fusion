@@ -16,7 +16,7 @@ import { AgentProvider } from "@ic-reactor/react";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AuthTrial />,
+    element: <App />,
   },
   {
     path: "/roadmap",

@@ -2,6 +2,7 @@ import logo from "/images/Upper corner.png";
 import nf from "/images/icons/nf_id.png";
 import internetId from "/images/icons/ICP_LOGO.png";
 import stoic from "/images/icons/bitcoin.png";
+import solana from "/images/icons/solana-3d-icon-download-in-png-blend-fbx-gltf-file-formats--cryptocurrency-coin-digital-crypto-coins-pack-science-technology-icons-4759536 1.png";
 import { useAuth } from "../auth/use-auth-client";
 import { useNavigate } from "react-router";
 
@@ -44,6 +45,7 @@ const SignInControls = () => {
     { text: "Connect With NF ID", image: nf, func: loginNFID },
     { text: "Connect With Internet ID", image: internetId, func: login },
     { text: "Connect With Bitcoin", image: stoic, func: () => {} },
+    { text: "Connect With Solana", image: solana, func: () => {} },
   ];
   return (
     <div className="space-y-16">

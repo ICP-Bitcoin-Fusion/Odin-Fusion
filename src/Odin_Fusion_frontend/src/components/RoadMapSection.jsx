@@ -11,7 +11,7 @@ function RoadMapSection({ milestones, projects }) {
       <section id="roadmap" className="relative z-30 ">
         <div className="bg-mid-bg bg-cover bg-no-repeat opacity-50 w-full aspect-[1.5] absolute top-44 rounded-br-[200px] -z-30"></div>
 
-        <div className="flex flex-col text-center w-full mb-20">
+        {/* <div className="flex flex-col text-center w-full mb-20">
           <h1 className="text-5xl font-medium title-font text-light-font underline my-20">
             Roadmap{" "}
           </h1>
@@ -24,7 +24,7 @@ function RoadMapSection({ milestones, projects }) {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </section>
 
       <section className="mt-20 z-30 relative" id="projects">
