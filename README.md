@@ -31,6 +31,11 @@ dfx start --background
 
 # Deploys your canisters to the replica and generates your candid interface
 dfx deploy
+
+# due to the bugs in the project which we are currently working hard to fix and resolve, we strongly recommend that to start the app just run:
+npm start
+
+# then open https://localhost:3000 on your browser
 ```
 
 Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
