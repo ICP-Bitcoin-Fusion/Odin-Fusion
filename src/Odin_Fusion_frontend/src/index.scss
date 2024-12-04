@@ -44,10 +44,10 @@ html {
   content: "";
   @apply w-full aspect-[1.73] bg-hero-bg bg-cover bg-center bg-no-repeat absolute p-5  top-0 -z-10;
 }
-.road::after {
-  content: "";
-  @apply w-full aspect-square bg-mid-bg bg-cover bg-center opacity-50 bg-no-repeat absolute p-5  top-52 -z-10;
-}
+// .road::after {
+//   content: "";
+//   @apply w-full aspect-square bg-mid-bg bg-cover bg-center opacity-50 bg-no-repeat absolute p-5  top-52 -z-10;
+// }
 .side {
   @apply duration-300 w-1/5;
 }

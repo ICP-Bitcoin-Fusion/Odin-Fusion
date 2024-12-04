@@ -3,23 +3,62 @@ import AccordionComponent from "../components/AccordionComponent";
 import Navbar from "../components/Navbar";
 import { useRef } from "react";
 
-const arr = [];
-
-for (let i = 0; i < 14; i++) {
-  arr.push({
-    milestone: "Development started",
-    date: "NOV",
+const arr = [
+  {
+    milestone: "Team Formation",
+    date: "Nov",
     subStones: [
-      "Odin Fusion goes open source",
-      "Odin Fusion published",
-      "Professional website redesign",
-      "SNS1 airdrop to 2000 OF OGs",
-      "System architecture published",
-      "Professional app redesign",
-      "Search group messages by @usernames",
+      "Scouting,organisingand management of team",
+      "Resolved efficiency time difference among team",
+      "Created a structure for team management",
+      "Regular checks on team members for proper updates on tasks given",
     ],
-  });
-}
+  },
+  {
+    milestone: "Idea and design structure",
+    date: "Nov",
+    subStones: [
+      "Reshaping and sharpening base ideas with the team",
+      "Analysing skills for the idea projected",
+      "Concluding on a particular idea",
+      "Brainstorming designs and page required for project",
+      "Task allocations for the frontend,backend and UI design",
+    ],
+  },
+  {
+    milestone: "Research and Learning",
+    date: "Nov",
+    subStones: [
+      "Team exposure to ICP terminologies and technologies",
+      "Documentation consumption and technology familiarity",
+      "Testing with examples what has been learnt",
+    ],
+  },
+  {
+    milestone: "Development",
+    date: "Nov",
+    subStones: [
+      "Created new project with DFX",
+      "Installed required dependencies and packages",
+      "Downloaded the bitcon core for foundation for communication with bitcoin testnet",
+      "Created new canister which handles HTTP outcalls to get ICP-USD price",
+      "Added necessary crates in the rust canister",
+    ],
+  },
+
+  {
+    milestone: "Future Roadmap",
+    date: "Nov",
+    subStones: [
+      "Fixing of all present bugs",
+      "Frontend- backend communication establishment",
+      "Integration of NFT mining technology and minting",
+      "Update UI for Enhanced User experience",
+      "Update http-outcalls to get the data for multiple cryptocurrencies not only ICP",
+      "E-COMMERCE beta",
+    ],
+  },
+];
 
 function RoadMap() {
   const milestones = useRef(arr);

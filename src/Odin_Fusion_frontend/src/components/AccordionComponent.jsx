@@ -14,7 +14,7 @@ function AccordionComponent({ milestone, subStones, date }) {
       onClick={handleOpenAnswer}
     >
       <div className="flex items-start justify-between">
-        <h4 className="cursor-pointer pb-10 flex items-center justify-between text-4xl text-light-font font-semibold ">
+        <h4 className="cursor-pointer pb-10 flex items-center capitalize justify-between text-4xl text-light-font font-semibold ">
           {milestone}
         </h4>
 
